@@ -10,4 +10,6 @@ def todo_list(request):
 
 def todo_detail(request, pk):
     todo = Todo.objects.get(id=pk)
-    return render(request, 'todo_')
+    return render(request, 'todo_detail.html', {'todo':todo})
+
+
