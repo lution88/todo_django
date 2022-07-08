@@ -3,7 +3,7 @@ from django import forms
 from todo.models import Todo
 
 
-class TodoForm(forms.Form):
+class TodoForm(forms.ModelForm):
     class Meta:
         model = Todo
-        fields = ('title','description','important')
+        fields = ('title', 'description', 'important')

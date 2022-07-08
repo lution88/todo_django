@@ -20,8 +20,9 @@ def todo_post(request):
         if form.is_valid():
             form.save()
             return redirect('todo_list')
-    form = TodoForm()
-    return render(request, 'todo/todo_post.html', {'form': form})
+    else:
+        form = TodoForm()
+        return render(request, 'todo/todo_post.html', {'form': form})
 
 
 def todo_edit(request, pk):
